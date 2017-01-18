@@ -1,0 +1,17 @@
+version: '2'
+services:
+    gatway-mongodb:
+        container_name: gatway-mongodb
+        image: mongo:3.2.10
+        ports:
+            - "27017:27017"
+        command: mongos --configdb gatway-mongodb-config
+    gatway-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    gatway-mongodb-config:
+        image: mongo:3.2.10
+        container_name: gatway-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

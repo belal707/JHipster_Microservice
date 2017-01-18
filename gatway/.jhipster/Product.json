@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "p_name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "p_price",
+            "fieldType": "Double"
+        }
+    ],
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "product",
+    "pagination": "no",
+    "microserviceName": "catalog",
+    "searchEngine": false
+}
