@@ -47,7 +47,7 @@ jhipster:
     security:
         authentication:
             jwt:
-                secret: 5c747962ca39c9b40f99616d95da99f13a767c7b
+                secret: c1299f486d350f03fd659956048456ce32a72ec5
                 # Token is valid 24 hours
                 tokenValidityInSeconds: 86400
     mail: # specific JHipster mail property, for standard properties see MailProperties
